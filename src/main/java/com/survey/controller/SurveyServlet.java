@@ -28,7 +28,7 @@ HttpServletResponse response) throws ServletException, IOException  {
         String emailOK = request.getParameter("emailOK") != null ? "Yes" : "No";
         String contactVia = request.getParameter("contactVia");
 
-        // Store data as request attributes
+        // Store data as request attributes 
         request.setAttribute("firstName", firstName);
         request.setAttribute("lastName", lastName);
         request.setAttribute("email", email);
