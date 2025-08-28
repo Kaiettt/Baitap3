@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.survey.model.User;
+
 @WebServlet("/survey")
 public class SurveyServlet extends HttpServlet {
     @Override
@@ -28,15 +30,9 @@ HttpServletResponse response) throws ServletException, IOException  {
         String emailOK = request.getParameter("emailOK") != null ? "Yes" : "No";
         String contactVia = request.getParameter("contactVia");
 
+        User user = new User(firstName, lastName, email, dob, heardFrom, wantsUpdates, emailOK, contactVia);   
         // Store data as request attributes 
-        request.setAttribute("firstName", firstName);
-        request.setAttribute("lastName", lastName);
-        request.setAttribute("email", email);
-        request.setAttribute("dob", dob);
-        request.setAttribute("heardFrom", heardFrom);
-        request.setAttribute("wantsUpdates", wantsUpdates);
-        request.setAttribute("emailOK", emailOK);
-        request.setAttribute("contactVia", contactVia);
+        request.setAttribute("user", user);
         
 
          request.getRequestDispatcher("/surveyResult.jsp").forward(request, response);

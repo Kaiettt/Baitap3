@@ -11,21 +11,20 @@
     <body>
         <div class="result-container">
             <h1>Thank you for your submission!</h1>
-
             <h2>Your Details</h2>
             <div class="info-group">
-                <p><strong>First Name:</strong> ${firstName}</p>
-                <p><strong>Last Name:</strong> ${lastName}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Date of Birth:</strong> ${dob}</p>
+                <p><strong>First Name:</strong> ${user.firstName}</p>
+                <p><strong>Last Name:</strong> ${user.lastName}</p>
+                <p><strong>Email:</strong> ${user.email}</p>
+                <p><strong>Date of Birth:</strong> ${user.dob}</p>
             </div>
 
             <h2>Survey Information</h2>
             <div class="info-group">
-                <p><strong>Heard From:</strong> ${heardFrom}</p>
-                <p><strong>Wants Updates:</strong> ${wantsUpdates}</p>
-                <p><strong>Email OK:</strong> ${emailOK}</p>
-                <p><strong>Preferred Contact:</strong> ${contactVia}</p>
+                <p><strong>Heard From:</strong> ${user.heardFrom}</p>
+                <p><strong>Wants Updates:</strong> ${user.wantsUpdates}</p>
+                <p><strong>Email OK:</strong> ${user.emailOK}</p>
+                <p><strong>Preferred Contact:</strong> ${user.contactVia}</p>
             </div>
 
             <div class="footer">
