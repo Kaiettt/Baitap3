@@ -31,7 +31,6 @@ HttpServletResponse response) throws ServletException, IOException  {
         String contactVia = request.getParameter("contactVia");
 
         User user = new User(firstName, lastName, email, dob, heardFrom, wantsUpdates, emailOK, contactVia);   
-        // Store data as request attributes 
         request.setAttribute("user", user);
         
 
